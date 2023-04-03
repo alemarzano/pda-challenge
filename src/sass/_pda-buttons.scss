@@ -1,0 +1,84 @@
+$btn-border-focus: 0 0 0 $spacing-2 $pink-600;
+$btn-line-height: $spacing-7;
+$btn-line-height-mobile: $spacing-6;
+$btn-solid-border-radius-desktop: $border-radius;
+$btn-solid-border-radius-mobile: $border-radius-2xl;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  margin: $spacing-3 0;
+  justify-content: center;
+  font-size: $font-body-2-mobile;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-body-1-desktop;
+  }
+
+  &:focus-visible {
+    box-shadow: $btn-border-focus;
+  }
+
+  span {
+    display: inline-flex;
+    line-height: $btn-line-height-mobile;
+    height: $btn-line-height-mobile;
+    font-weight: 700;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      line-height: $btn-line-height;
+      height: $btn-line-height;
+    }
+  }
+
+  svg {
+    margin-left: $spacing-5;
+    height: $spacing-7;
+    width: $spacing-7;
+  }
+
+  &-outline-primary {
+    border-width: $spacing-1;
+
+    svg {
+      fill: $primary;
+    }
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      span {
+        color: $white;
+      }
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &-solid {
+    border: none;
+    background-color: $yellow;
+    padding-top: $spacing-3;
+    padding-bottom: $spacing-3;
+    border-radius: $btn-solid-border-radius-mobile;
+
+    @include media-breakpoint-up(md) {
+      padding: $spacing-1 $spacing-8;
+      border-radius: $btn-solid-border-radius-desktop;
+    }
+
+    span {
+      color: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: $orange;
+    }
+  }
+}

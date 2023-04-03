@@ -1,0 +1,163 @@
+/* ==========================================================================
+Color
+========================================================================== */
+
+@import "../../node_modules/bootstrap/scss/functions";
+
+/* Bootstrap color variables */
+
+$primary: #0075ff;
+$blue: #0075ff;
+$primary-light: #80bffe;
+$secondary: #6a6a6a;
+$terciary: #6d7783;
+$yelllow: #ffbf47;
+$pink: #e6a0f2;
+$orange: #ff6819;
+$gray: #c3c4ca;
+$shadow-black: rgba(0, 0, 0, 0.15);
+
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "terciary": $terciary,
+  "primary-light": $primary-light,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+
+/* ==========================================================================
+Typography
+========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+$font-family-sans-serif: "Poppins", sans-serif;
+// $font-size-base: 1.0625rem; // 17px
+$font-h2-desktop: 4rem; // 64px ;
+$font-h2-mobile: 1.5rem; // 24px ;
+$font-h4-desktop: 2rem; // 32px;
+$font-h4-mobile: 1.5rem; // 24px;
+$font-h5-desktop: 1.5rem; // 24px;
+$font-h5-mobile: 1.0625rem; // 17px;
+$font-h6-desktop: 1.5rem; // 24px;
+$font-h6-mobile: 1.25rem; // 20px;
+$font-body-1-desktop: 1.1875rem; // 19px;
+$font-body-2-desktop: 1.0625rem; // 17px;
+$font-body-2-mobile: 0.875rem; // 14px
+$font-body-sm: 0.75rem; // 12px
+$font-size-base: $font-body-2-mobile;
+/* Bootstrap text variables */
+
+$h2-font-size: $font-h2-mobile;
+$h4-font-size: $font-h4-mobile;
+$h5-font-size: $font-h5-mobile;
+$h6-font-size: $font-h6-mobile;
+
+$small-font-size: $font-body-sm;
+$font-size-sm: $font-body-sm;
+
+/* ==========================================================================
+Spacing
+========================================================================== */
+
+$spacing-min: 0.0625rem; //1px
+$spacing-1: 0.125rem; //2px
+$spacing-2: 0.25rem; //4px
+$spacing-3: 0.5rem; //8px
+$spacing-4: 0.75rem; //12px
+$spacing-5: 1rem; //16px
+$spacing-6: 1.25rem; //20px
+$spacing-7: 1.5rem; //24px
+$spacing-8: 1.75rem; //28px
+$spacing-9: 2.5rem; //40px
+$spacing-10: 3rem; //48px
+$spacing-11: 3.5rem; //56px
+$spacing-12: 4rem; //64px
+
+/* ==========================================================================
+Border Radius
+========================================================================== */
+
+$border-radius: 1.125rem; // 18px
+$border-radius-sm: 1rem;
+$border-radius-lg: 1.3125rem; // 21px
+$border-radius-xl: 1.5626rem; // 25px;
+$border-radius-2xl: 3.125rem; // 50px
+$border-radius-pill: 6.25rem; // 100px
+
+/* ==========================================================================
+Box Shadows
+========================================================================== */
+$enable-shadows: true;
+$box-shadow: 0.315rem 0.315rem 1.25rem $shadow-black;
+$box-shadow-sm: 0 0.125rem 0.25rem $gray;
+$box-shadow-lg: 0.375rem 0.375rem 1.5rem $shadow-black;
+
+/* ==========================================================================
+Buttons
+========================================================================== */
+
+/* Bootstrap btn variables */
+
+$btn-border-radius: $border-radius-pill;
+$btn-padding-x: $spacing-5;
+$btn-padding-y: 0;
+
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/reboot";
+
+h2,
+h4 {
+  font-weight: 700;
+}
+h5 {
+  font-weight: 500;
+}
+h6 {
+  font-weight: 300;
+}
+
+@include media-breakpoint-up(md) {
+  $font-size-base: $font-body-2-desktop;
+
+  body {
+    font-size: $font-body-2-desktop;
+  }
+  h2 {
+    font-size: $font-h2-desktop;
+  }
+  h4 {
+    font-size: $font-h4-desktop;
+  }
+  h5 {
+    font-size: $font-h5-desktop;
+  }
+  h6 {
+    font-size: $font-h6-desktop;
+  }
+}
+
+.fs-19 {
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(md) {
+    font-size: $font-body-1-desktop;
+  }
+}
+
+@import "../../node_modules/bootstrap/scss/utilities/api";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "./pda-buttons";
+@import "./boxes";

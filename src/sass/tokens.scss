@@ -1,0 +1,593 @@
+/* ==========================================================================
+breakpoint (in diferent file so they can be imported in other files)
+========================================================================== */
+@import "./breakpoint";
+/* ==========================================================================
+Colors
+========================================================================== */
+
+/* ==========================================================================
+Branding base color
+========================================================================== */
+/*--- Primary */
+
+$strongPrimary: #005d40;
+$Primary: #2e846b;
+$Primary90: #219963;
+$lightPrimary: #1f8c6b;
+$superLightPrimary: #c7e2da;
+$extraLightPrimary: #e6f2ee;
+
+/*--- Secondary */
+
+$strongSecondary: #2b5f8c;
+$Secondary: #003c71;
+$Secondary90: #1a61ab;
+$lightSecondary: #33638d;
+$superLightSecondary: #99b1c6;
+$extraLightSecondary: #ebf0f5;
+
+/*--- Neutrals */
+
+$strongBlack: #3a4454;
+$black: #556176;
+$strongGrey: #697887;
+$grey: #a5adb4;
+$lightGrey: #dce1e9;
+$superLightGrey: #ebf0f5;
+$superLightGrey2: #f5f7fa;
+$white: #ffffff;
+
+/*--- Success */
+
+$succes: #219963;
+$mediumSucces: #67ac92;
+$extraLightSucces: #e2f5e8;
+
+/*--- Error */
+
+$error: #e31d19;
+$mediumError: #f68a70;
+$extraLightError: #fce9e7;
+
+/*--- Info */
+
+$info: #13599e;
+$mediumInfo: #859ccf;
+$extraLightInfo: #ebf0f5;
+
+/*--- Warning */
+
+$Warning: #ffb414;
+$mediumWarning: #ffd989;
+$extraLightWarning: #fff4dc;
+
+/*--- Wally */
+
+$wallyTechBackground: #390094;
+$wallyBackground: #d9c9fc;
+$wallyBackgroundLight: #ece4fd;
+$wally: #553cb9;
+
+/* ==========================================================================
+Theme base color
+========================================================================== */
+
+/*--- Primary */
+
+$primary-active-color: $strongPrimary;
+$primary-color: $Primary;
+$primary-hover-color: $Primary90;
+$primary-focus-color: $lightPrimary;
+$primary-pressed-color: $superLightPrimary;
+$primary-background-color: $extraLightPrimary;
+
+/*--- Secondary */
+
+$secondary-active-color: $strongSecondary;
+$secondary-color: $Secondary;
+$secondary-link-color: $Secondary;
+$secondary-hover-color: $Secondary90;
+$secondary-focus-color: $lightSecondary;
+$secondary-pressed-color: $superLightSecondary;
+$secondary-background-color: $extraLightSecondary;
+
+/*--- Neutrals */
+
+$modal-background: $strongBlack;
+$text-boton: $strongBlack;
+
+$heading-color: $black;
+
+$text-color: $strongGrey;
+
+$text-secondary-color: $grey;
+$border-base-color: $grey;
+$text-disabled-color: $grey;
+
+$background-divider: $lightGrey;
+
+$background-disabled: $superLightGrey;
+$background-border-disabled: $superLightGrey;
+$background-secondary: $superLightGrey;
+$menu-background: $superLightGrey2;
+
+$component-background: $white;
+$text-inverse-color: $white;
+$layout-footer-background: $white;
+$layout-header-background: $white;
+$layout-body-background: $white;
+$footer-background: $white;
+
+/*--- Success */
+
+$success-color: $succes;
+$success-border-color: $mediumSucces;
+$success-background-color: $extraLightSucces;
+
+/*--- Error */
+
+$error-color: $error;
+$error-border-color: $mediumError;
+$error-light-background-color: $mediumError;
+$error-background-color: $extraLightError;
+
+/*--- Info */
+
+$info-color: $info;
+$info-border-color: $mediumInfo;
+$info-background-color: $extraLightInfo;
+
+/*--- Warning */
+
+$warning-color: $Warning;
+$warning-border-color: $mediumWarning;
+$warning-light-background-color: $mediumWarning;
+$warning-background-color: $extraLightWarning;
+
+/*--- widget */
+
+$widget-porfolio-liquidity--background-color: #00bc9b;
+$widget-porfolio-fixedIncomes--background-color: #2d96dd;
+$widget-porfolio-variableIncomes--background-color: #9c56b8;
+
+$modal-opacity: 0.75;
+
+/*--- Gradients */
+$mix-vertical-gradient: linear-gradient(180deg, $Primary 0%, $Secondary 100%);
+$primary-vertical-gradient: linear-gradient(180deg, $strongPrimary 0%, $Primary 100%);
+$secondary-vertical-gradient: linear-gradient(180deg, $Secondary 0%, $strongSecondary 100%);
+
+$degradado-ppal-02: linear-gradient(90deg, $Secondary90 0%, $Primary 100%);
+
+/*--- cards */
+
+$credit-cards-color: #9b7c38;
+$credit-cards-color-black: linear-gradient(180deg, #414042 0%, #737273 100%);
+$credit-cards-color-red: linear-gradient(180deg, #e30449 0%, #da4975 100%);
+$credit-cards-color-violet: linear-gradient(180deg, #410099 0%, #6609e2 100%);
+$credit-cards-color-silver: linear-gradient(180deg, #757575 0%, #aca9ae 100%);
+$credit-cards-color-blue: linear-gradient(180deg, #1a2735 0%, #173d59 100%);
+
+/*--- Wally */
+$wally-background: $wallyBackground;
+$wally-background-light: $wallyBackgroundLight;
+$wally-tech-background: $wallyTechBackground;
+$wally: $wally;
+
+/* ==========================================================================
+Basic Spacing
+========================================================================== */
+//** Number of columns in the grid.
+$grid-columns: 12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 1.5rem !default;
+
+/* ==========================================================================
+Spacing
+========================================================================== */
+
+$spacing-min: 0.0625rem; //1px
+$spacing-1: 0.125rem; //2px
+$spacing-2: 0.25rem; //4px
+$spacing-3: 0.5rem; //8px
+$spacing-4: 0.75rem; //12px
+$spacing-5: 1rem; //16px
+$spacing-6: 1.25rem; //20px
+$spacing-7: 1.5rem; //24px
+$spacing-8: 2rem; //32px
+$spacing-9: 2.5rem; //40px
+$spacing-10: 3rem; //48px
+$spacing-11: 3.5rem; //56px
+$spacing-12: 4rem; //64px
+$spacing-form: 0.625rem; //10px Usar solo en Form
+
+/* ==========================================================================
+Sizing
+========================================================================== */
+
+$size-min: 0.0625rem; //1px
+$size-1: 0.125rem; //2px
+$size-2: 0.25rem; //4px
+$size-3: 0.5rem; //8px
+$size-4: 0.75rem; //12px
+$size-5: 1rem; //16px
+$size-6: 1.25rem; //20px
+$size-7: 1.5rem; //24px
+$size-8: 2rem; //32px
+$size-9: 2.5rem; //40px
+$size-10: 3rem; //48px
+$size-11: 3.5rem; //56px
+$size-12: 4rem; //64px
+
+/* ==========================================================================
+Z-index
+========================================================================== */
+
+$z-index-n-1: -100;
+$z-index-0: 0;
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-header: 1000;
+$z-index-menu: 1100;
+$z-index-modal: 1900;
+$z-index-loader: 2000;
+
+/* ==========================================================================
+Bezier animations
+========================================================================== */
+$bezier-1: cubic-bezier(0.8, 0, 0.2, 1);
+
+/* ==========================================================================
+Outlines
+========================================================================== */
+$outline-focus: inset 0 0 0 0.125rem var(--primary-focus-color);
+$outline-active: 0 0 0 0.125rem var(--primary-active-color);
+$outline-pressed: 0 0 0 0.125rem var(--primary-pressed-color);
+
+$outline-component-background: 0 0 0 0.125rem var(--component-background);
+
+/* ==========================================================================
+Shadows
+========================================================================== */
+
+$shadow-black: 0 0.125rem 0.125rem #00000025;
+$shadow-black-md: 0 var(--size-2) var(--size-3) #00000047;
+$shadow-black-md-top: 0 calc(var(--size-1) * -1) var(--size-2) #00000047;
+
+/* ==========================================================================
+Border-radius
+========================================================================== */
+$border-radius-min: 0.0625rem; //1px
+$border-radius-xs: 0.125rem; //2px
+$border-radius-sm: 0.25rem; //4px
+$border-radius-md: 0.5rem; //8px
+$border-radius-lg: 0.75rem; //12px
+$border-radius-xl: 1rem; //16px
+$border-radius-xxl: 1.25rem; //20px
+$border-radius-extreme: 2rem; //32px
+
+$border-radius-circle: 50%;
+
+$border-radius-input: 0.5rem; //8px
+$border-radius-button: 1.5rem; //24px
+$border-radius-chip: 5rem;
+
+$border-radius-default: 0.9375rem; //15px
+
+/* ==========================================================================
+Typography
+========================================================================== */
+
+/*
+Fonts: Load fonts here
+========================================================================== */
+@font-face {
+    font-family: "Lato";
+    font-weight: 300;
+    font-style: normal;
+    src: url(../../../fonts/themeFonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-weight: normal;
+    font-style: normal;
+    src: url(../../../fonts/themeFonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: "Lato";
+    font-weight: bold;
+    font-style: normal;
+    src: url(../../../fonts/themeFonts/Lato-Bold.ttf);
+}
+
+$theme-font: "Lato", Helvetica, Arial, sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+// :Root font-size (in px) ****If this map definition is modified, is important to set the sames values in mapGlobalFonSize inside device.js
+$map-global-font-size: (
+    320px: 13px,
+    359px: 16px,
+    1367px: 16px,
+    1920px: 16px,
+    3839px: 32px,
+);
+// Set font sizes when device pixel ratio is 3 ****If this value is modified, is important to set the same value in mapGlobalFonSize inside device.js
+$dpr3: 18px;
+
+// ---
+// $desktopBase: 1rem;
+$desktop-size-big: 1.75rem; //28px
+$desktop-size-1: 1.5rem; //24px
+$desktop-size-2: 1.375rem; //22px
+$desktop-size-3: 1.25rem; //20px
+$desktop-size-4: 1.125rem; //18px
+$desktop-size-5: 1rem; //16px
+$desktop-size-6: 0.875rem; //14px
+$desktop-size-7: 0.75rem; //12px
+$desktop-size-small: 0.625rem; //10px
+
+// ---
+// $mobileBase: 1rem;
+$mobile-size-big: 1.375rem; //22px
+$mobile-size-1: 1.25rem; //20px
+$mobile-size-2: 1.125rem; //18px
+$mobile-size-3: 1rem; //16px
+$mobile-size-4: 0.875rem; //14px
+$mobile-size-5: 0.875rem; //14px
+$mobile-size-6: 0.75rem; //12px
+$mobile-size-7: 0.625rem; //10px
+$mobile-size-small: 0.625rem; //10px
+
+/* line-height */
+$line-height-base: normal;
+$line-height-125: 1.25;
+
+/* Interpolation map to acomodate font size on :root */
+
+$external-footer-height: 2rem * 1.5;
+
+/* Sidebar */
+
+$sidebar-width: 16rem;
+$sidebar-width--collapsed: $spacing-12;
+$sidebar-easing: cubic-bezier(0.075, 0.82, 0.165, 1);
+$sidebar-transition-length: $sidebar-width - $sidebar-width--collapsed;
+
+:root {
+    @include poly-fluid-sizing("font-size", $map-global-font-size);
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 390px) and (max-width: 1024px),
+        only screen and (min--moz-device-pixel-ratio: 3) and (min-width: 390px) and (max-width: 1024px) {
+        font-size: $dpr3;
+    }
+
+    //Always use light mode
+    color-scheme: light only;
+
+    //Primary
+
+    --primary-active-color: #{$primary-active-color};
+    --primary-color: #{$primary-color};
+    --primary-hover-color: #{$primary-hover-color};
+    --primary-focus-color: #{$primary-focus-color};
+    --primary-pressed-color: #{$primary-pressed-color};
+    --primary-background-color: #{$primary-background-color};
+
+    //Secondary
+
+    --secondary-active-color: #{$secondary-active-color};
+    --secondary-color: #{$secondary-color};
+    --secondary-link-color: #{$secondary-link-color};
+    --secondary-hover-color: #{$secondary-hover-color};
+    --secondary-focus-color: #{$secondary-focus-color};
+    --secondary-pressed-color: #{$secondary-pressed-color};
+    --secondary-background-color: #{$secondary-background-color};
+
+    //Neutrals
+
+    --modal-background: #{$modal-background};
+    --text-boton: #{$text-boton};
+
+    --heading-color: #{$heading-color};
+    --text-color: #{$text-color};
+
+    --text-secondary-color: #{$text-secondary-color};
+    --border-base-color: #{$border-base-color};
+    --text-disabled-color: #{$text-disabled-color};
+
+    --background-divider: #{$background-divider};
+
+    --background-disabled: #{$background-disabled};
+    --background-border-disabled: #{$background-border-disabled};
+    --background-secondary: #{$background-secondary};
+    --menu-background: #{$menu-background};
+
+    --component-background: #{$component-background};
+    --text-inverse-color: #{$text-inverse-color};
+
+    --layout-footer-background: #{$layout-footer-background};
+    --layout-header-background: #{$layout-header-background};
+    --layout-body-background: #{$layout-body-background};
+    --footer-background: #{$footer-background};
+
+    /*--- Success */
+
+    --success-color: #{$success-color};
+    --success-border-color: #{$success-border-color};
+    --success-background-color: #{$success-background-color};
+
+    /*--- Error */
+
+    --error-color: #{$error-color};
+    --error-border-color: #{$error-border-color};
+    --error-light-background-color: #{$error-light-background-color};
+    --error-background-color: #{$error-background-color};
+
+    /*--- Info */
+
+    --info-color: #{$info-color};
+    --info-border-color: #{$info-border-color};
+    --info-background-color: #{$info-background-color};
+
+    /*--- Warning */
+
+    --warning-color: #{$warning-color};
+    --warning-border-color: #{$warning-border-color};
+    --warning-light-background-color: #{$warning-border-color};
+    --warning-background-color: #{$warning-background-color};
+
+    --modal-opacity: #{$modal-opacity};
+
+    /*--- Gradients */
+
+    --mix-vertical-gradient: #{$mix-vertical-gradient};
+
+    --primary-vertical-gradient: #{$primary-vertical-gradient};
+
+    --secondary-vertical-gradient: #{$secondary-vertical-gradient};
+
+    --degradado-ppal-02: #{$degradado-ppal-02};
+
+    /*--- Cards Colors */
+
+    --credit-cards-color: #{$credit-cards-color};
+    --credit-cards-color-black: #{$credit-cards-color-black};
+    --credit-cards-color-red: #{$credit-cards-color-red};
+    --credit-cards-color-blue: #{$credit-cards-color-blue};
+    --credit-cards-color-silver: #{$credit-cards-color-silver};
+
+    /*--- Wally Colors */
+    --wally-background: #{$wally-background};
+    --wally-background-light: #{$wally-background-light};
+    --wally-tech-background: #{$wally-tech-background};
+    --wally: #{$wally};
+
+    /*--- Spacing */
+
+    --spacing-min: #{$spacing-min};
+    --spacing-1: #{$spacing-1};
+    --spacing-2: #{$spacing-2};
+    --spacing-3: #{$spacing-3};
+    --spacing-4: #{$spacing-4};
+    --spacing-5: #{$spacing-5};
+    --spacing-6: #{$spacing-6};
+    --spacing-7: #{$spacing-7};
+    --spacing-8: #{$spacing-8};
+    --spacing-9: #{$spacing-9};
+    --spacing-10: #{$spacing-10};
+    --spacing-11: #{$spacing-11};
+    --spacing-12: #{$spacing-12};
+    --spacing-form: #{$spacing-form};
+
+    /*--- Size */
+
+    --size-min: #{$size-min};
+    --size-1: #{$size-1};
+    --size-2: #{$size-2};
+    --size-3: #{$size-3};
+    --size-4: #{$size-4};
+    --size-5: #{$size-5};
+    --size-6: #{$size-6};
+    --size-7: #{$size-7};
+    --size-8: #{$size-8};
+    --size-9: #{$size-9};
+    --size-10: #{$size-10};
+    --size-11: #{$size-11};
+    --size-12: #{$spacing-12};
+
+    /*--- Line-height */
+
+    --line-height-base: #{$line-height-base};
+    --line-height-125: #{$line-height-125};
+
+    /*--- Shadows */
+
+    --shadow-black: #{$shadow-black};
+    --shadow-black-md: #{$shadow-black-md};
+    --shadow-black-md-top: #{$shadow-black-md-top};
+
+    /*--- Border-radius */
+
+    --border-radius-min: #{$border-radius-min};
+    --border-radius-xs: #{$border-radius-xs};
+    --border-radius-sm: #{$border-radius-sm};
+    --border-radius-md: #{$border-radius-md};
+    --border-radius-lg: #{$border-radius-lg};
+    --border-radius-xl: #{$border-radius-xl};
+    --border-radius-xxl: #{$border-radius-xxl};
+    --border-radius-extreme: #{$border-radius-extreme};
+
+    --border-radius-input: #{$border-radius-input};
+    --border-radius-button: #{$border-radius-button};
+    --border-radius-circle: #{$border-radius-circle};
+    --border-radius-chip: #{$border-radius-chip};
+
+    --border-radius-default: #{$border-radius-default};
+
+    /*--- Z-index */
+
+    --z-index-n-1: #{$z-index-n-1};
+    --z-index-0: #{$z-index-0};
+    --z-index-1: #{$z-index-1};
+    --z-index-2: #{$z-index-2};
+    --z-index-3: #{$z-index-3};
+    --z-index-4: #{$z-index-4};
+    --z-index-5: #{$z-index-5};
+    --z-index-6: #{$z-index-6};
+    --z-index-7: #{$z-index-7};
+    --z-index-8: #{$z-index-8};
+    --z-index-9: #{$z-index-9};
+    --z-index-header: #{$z-index-header};
+    --z-index-menu: #{$z-index-menu};
+    --z-index-modal: #{$z-index-modal};
+    --z-index-loader: #{$z-index-loader};
+
+    /*--- Fonts */
+    --theme-font: #{$theme-font};
+
+    /*--- Font weight */
+    --light: #{$light};
+    --regular: #{$regular};
+    --bold: #{$bold};
+
+    /*--- Font Size */
+    // Mobile
+    @media (max-width: $mobile) {
+        --font-size-big: #{$mobile-size-big};
+        --font-size-1: #{$mobile-size-1};
+        --font-size-2: #{$mobile-size-2};
+        --font-size-3: #{$mobile-size-3};
+        --font-size-4: #{$mobile-size-4};
+        --font-size-5: #{$mobile-size-5};
+        --font-size-6: #{$mobile-size-6};
+        --font-size-7: #{$mobile-size-7};
+        --font-size-small: #{$mobile-size-small};
+    }
+    // Desktop
+    @media (min-width: $desktop) {
+        --font-size-big: #{$desktop-size-big};
+        --font-size-1: #{$desktop-size-1};
+        --font-size-2: #{$desktop-size-2};
+        --font-size-3: #{$desktop-size-3};
+        --font-size-4: #{$desktop-size-4};
+        --font-size-5: #{$desktop-size-5};
+        --font-size-6: #{$desktop-size-6};
+        --font-size-7: #{$desktop-size-7};
+        --font-size-small: #{$desktop-size-small};
+    }
+
+    --outline-focus: #{$outline-focus};
+    --outline-active: #{$outline-active};
+    --outline-pressed: #{$outline-pressed};
+    --outline-component-background: #{$outline-component-background};
+}

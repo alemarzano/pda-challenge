@@ -1,0 +1,51 @@
+.accordion-tendencias {
+  .bar {
+    .text {
+      display: none;
+      &.transition-text {
+        display: flex;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    .line {
+      @extend .progress-line;
+
+      svg path:last-of-type {
+        stroke: $terciary-light;
+        transition: all 0.3s ease-in-out;
+      }
+      &.active {
+        svg path:last-of-type {
+          stroke: $primary;
+        }
+      }
+    }
+  }
+}
+
+.desarrollo {
+  list-style: none;
+  padding-left: $spacing-7;
+  li {
+    padding-left: $spacing-8;
+    position: relative;
+    margin: $spacing-7 0;
+    &::before {
+      content: "";
+      width: 0.25rem;
+      height: 3.5rem;
+      background-color: $primary;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+    li {
+      padding-left: 5rem;
+    }
+  }
+}

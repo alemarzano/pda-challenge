@@ -11,64 +11,159 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <include src="partials/nav.html"></include>
     </header>
     <main>
-      <div class="container py-4 px-3 mx-auto">
-        <div class="shadow-lg w-50 rounded-2 m-2 p-4">
-          <include src="partials/nav.html"></include>
+      <div class="container-fluid px-4 px-lg-5">
+        <picture class="header-bg">
+          <source
+            srcset="./images/background-1.svg"
+            media="(min-width: 992px)"
+          />
+          <img
+            src="./images/background-mobile-1.svg"
+            alt="vector miscelaneo de fondo"
+          />
+        </picture>
+        <div class="row">
+          <div class="col-12 col-lg-10 mx-auto">
+            <!-- User Header & Circle progress bar -->
+            <include src="partials/user-header.html"></include>
+            <!-- Carousel competencias -->
+            <include src="partials/user-competencias.html"></include>
+            <!-- Tendencias de Comportamiento -->
+            <include src="partials/user-tendencias.html"></include>
+            <!-- Características del perfil -->
+            <include src="partials/user-perfil.html"></include>
+          </div>
         </div>
-
-        <h2>Esto es un h2</h2>
-        <h4>Esto es un h4</h4>
-        <h5>Esto es un h5</h5>
-        <h6>Esto es un h6</h6>
-        <p class="fs-19">Esto es body-1</p>
-        <p>Esto es body-2</p>
-        <button
-          class="btn btn-outline-primary"
-          type="button"
-          aria-label="Ver más sobre este tema"
-        >
-          <span aria-hidden="true">Ver más</span>
-          <svg width="24" height="24" viewBox="0 0 24 24">
-            <use xlink:href="./images/icons/arrow-button.svg#arrow-right" />
-          </svg>
-        </button>
-        <button
-          class="btn btn-solid"
-          type="button"
-          aria-label="Ver más sobre este tema"
-        >
-          <span aria-hidden="true">Enviar reporte</span>
-        </button>
+        <div class="row m-b-8 m-b-lg-9 p-t-9 justify-content-evenly">
+          <div
+            class="col-12 col-md-6 col-lg-5 d-flex align-items-center m-b-9 mb-md-0"
+          >
+            <img
+              class="mw-100"
+              src="./images/section-certification.png"
+              alt="imagen de tres personas"
+            />
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-5 d-flex flex-column align-items-center align-items-lg-start justify-content-center"
+          >
+            <div class="m-b-6 m-b-lg-8">
+              <h4 class="text-center m-b-4">Certificación y validación</h4>
+              <p class="text-tertiary">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img
+                class="mx-2"
+                src="./images/certification-1.png"
+                alt="logo de Equal Employment Oportunity Comission"
+              /><img
+                class="mx-2"
+                src="./images/certification-2.png"
+                alt="logo de American Institute of Business Pschology"
+              /><img
+                class="mx-2"
+                src="./images/certification-3.png"
+                alt="lo de 2E estudios y evaluaciones"
+              />
+            </div>
+          </div>
+        </div>
       </div>
+      <section class="m-b-8 m-b-lg-9 p-t-9">
+        <div class="bg-gray-light">
+          <div class="container-fluid px-2 px-lg-5 p-t-11 p-b-11">
+            <div class="row justify-content-evenly">
+              <div
+                class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-center align-items-lg-start m-b-9 mb-md-0"
+              >
+                <hgroup class="text-center text-md-start mb-4">
+                  <h4>
+                    ¿Sabías que le puedes enviar al candidato un reporte
+                    personalizado?
+                  </h4>
+                  <h5>¡Hazlo ya!</h5>
+                </hgroup>
+                <button
+                  class="btn btn-solid"
+                  type="button"
+                  aria-label="Enviar reporte al candidato"
+                >
+                  <span aria-hidden="true">Enviar reporte</span>
+                </button>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <img
+                  class="mw-100"
+                  src="./images/cta.svg"
+                  alt="imagen de una carta abierta"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="p-t-8">
+      <div class="row">
+        <div class="col-12 col-md-4 offset-md-4 text-center">
+          <ul class="d-lg-flex justify-content-evenly px-0 text-center m-b-9">
+            <li class="px-0">
+              <a class="text-decoration-none text-dark" href="#">Home</a>
+            </li>
+            <li class="px-0">
+              <a class="text-decoration-none text-dark" href="#">About</a>
+            </li>
+            <li class="px-0">
+              <a class="text-decoration-none text-dark" href="#"
+                >Descargar PDF</a
+              >
+            </li>
+            <li class="px-0">
+              <a class="text-decoration-none text-dark" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center align-items-center m-b-9">
+            <a href="#">
+              <img
+                class="mx-2"
+                src="./images/Facebook.svg"
+                alt="logo de facebook"
+                title="Síguenos en Facebook"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="mx-2"
+                src="./images/Instagram.svg"
+                alt="logo de instagram"
+                title="Síguenos en Instagram"
+              />
+            </a>
+            <a href="#">
+              <img
+                class="mx-2"
+                src="./images/Twitter.svg"
+                alt="logo de twitter"
+                title="Síguenos en Twitter"
+              />
+            </a>
+          </div>
+          <p
+            class="fs-19 text-terciary text-center"
+            aria-label="Derechos de autor"
+          >
+            PDA International 2022. All right reserved
+          </p>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="./js/main.js"></script>
   </body>

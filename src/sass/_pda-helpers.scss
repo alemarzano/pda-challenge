@@ -1,0 +1,94 @@
+@mixin generate($prefix, $property) {
+  // List of sizes to generate for each
+
+  $sizes: (
+    $spacing-1,
+    $spacing-2,
+    $spacing-3,
+    $spacing-4,
+    $spacing-5,
+    $spacing-6,
+    $spacing-7,
+    $spacing-8,
+    $spacing-9,
+    $spacing-10,
+    $spacing-11,
+    $spacing-12
+  );
+
+  // Loop through all of the sizes(we use @for rather than @each, as we want access to the index)
+  @for $i from 1 through length($sizes) {
+    // Get the size for the current index
+    $size: nth($sizes, $i);
+
+    // Create the rule
+    .#{$prefix}-#{$i - 1} {
+      #{$property}: $size;
+    }
+  }
+}
+
+@include generate(m-l, margin-left);
+@include generate(m-r, margin-right);
+@include generate(m-t, margin-top);
+@include generate(m-b, margin-bottom);
+@include generate(p-l, padding-left);
+@include generate(p-r, padding-right);
+@include generate(p-t, padding-top);
+@include generate(p-b, padding-bottom);
+
+@include media-breakpoint-up(md) {
+  @include generate(m-l-md, margin-left);
+  @include generate(m-r-md, margin-right);
+  @include generate(m-t-md, margin-top);
+  @include generate(m-b-md, margin-bottom);
+  @include generate(p-l-md, padding-left);
+  @include generate(p-r-md, padding-right);
+  @include generate(p-t-md, padding-top);
+  @include generate(p-b-md, padding-bottom);
+}
+@include media-breakpoint-up(lg) {
+  @include generate(m-l-lg, margin-left);
+  @include generate(m-r-lg, margin-right);
+  @include generate(m-t-lg, margin-top);
+  @include generate(m-b-lg, margin-bottom);
+  @include generate(p-l-lg, padding-left);
+  @include generate(p-r-lg, padding-right);
+  @include generate(p-t-lg, padding-top);
+  @include generate(p-b-lg, padding-bottom);
+}
+
+.text-terciary {
+  color: $terciary;
+}
+.bg-gray-light {
+  background-color: $gray-light;
+}
+
+.fs-19 {
+  font-size: $font-size-base;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-body-1-desktop;
+  }
+}
+
+.fs-small {
+  font-size: $font-size-sm;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $font-body-2-desktop;
+  }
+}
+ul {
+  list-style: none;
+}
+.tooltip {
+  box-shadow: $box-shadow-sm;
+  border-radius: 0.75rem;
+  background: $white;
+  font-weight: 300;
+  &-inner {
+    text-align: left;
+  }
+}

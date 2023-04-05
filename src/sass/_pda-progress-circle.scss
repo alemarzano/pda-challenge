@@ -1,0 +1,122 @@
+$circle-dimension: 15rem;
+$circle-dimension-lg: calc(#{$circle-dimension} * 1.5);
+$circle-dimension-xl: 29.375rem;
+$circle-border-bottom: calc(#{$circle-dimension} * 1.1);
+$circle-border-bottom-lg: calc(#{$circle-dimension-lg} * 1.15);
+$circle-border-bottom-xl: calc(#{$circle-dimension-xl} * 1.08);
+$border-circle: 0.25rem;
+$border-circle-lg: calc(#{$border-circle} * 1.5);
+$border-circle-xl: calc(#{$border-circle} * 2);
+$triangle-size: 0.625rem;
+$triangle-size-lg: calc(#{$triangle-size} * 1.5);
+$triangle-size-xl: calc(#{$triangle-size} * 2);
+
+.progress-circle__container {
+  position: relative;
+  background-color: $white;
+  width: $circle-dimension;
+
+  &::before {
+    content: "";
+    width: $circle-border-bottom;
+    height: $circle-border-bottom;
+    display: block;
+    background-color: transparent;
+    border-right: $border-circle solid transparent;
+    border-bottom: $border-circle solid $primary;
+    border-left: $border-circle solid transparent;
+    border-top: $border-circle solid transparent;
+    position: absolute;
+    border-radius: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: $triangle-size solid transparent;
+    border-right: $triangle-size solid transparent;
+    border-top: $triangle-size solid $primary;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    bottom: -8%;
+  }
+
+  .progress-circle {
+    padding: $spacing-5;
+    width: $circle-dimension;
+    height: $circle-dimension;
+    z-index: 10;
+    position: relative;
+    svg path {
+      stroke-linecap: round;
+    }
+    &__label {
+      @extend h2;
+      text-align: center;
+
+      &--text {
+        font-size: $font-h5-mobile;
+        display: block;
+        margin-top: $spacing-3;
+      }
+
+      @include media-breakpoint-up(lg) {
+        line-height: 72px;
+
+        &--text {
+          font-size: $font-h4-mobile;
+          line-height: 40px;
+          margin-top: $spacing-5;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: $circle-dimension-lg;
+
+    &::before {
+      width: $circle-border-bottom-lg;
+      height: $circle-border-bottom-lg;
+      border-width: $border-circle-lg;
+    }
+    &::after {
+      border-left-width: $triangle-size-lg;
+      border-right-width: $triangle-size-lg;
+      border-top-width: $triangle-size-lg;
+    }
+
+    .progress-circle {
+      width: $circle-dimension-lg;
+      height: $circle-dimension-lg;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: $circle-dimension-xl;
+
+    &::before {
+      width: $circle-border-bottom-xl;
+      height: $circle-border-bottom-xl;
+      border-width: $border-circle-xl;
+    }
+    &::after {
+      border-left-width: $triangle-size-xl;
+      border-right-width: $triangle-size-xl;
+      border-top-width: $triangle-size-xl;
+    }
+
+    .progress-circle {
+      width: $circle-dimension-xl;
+      height: $circle-dimension-xl;
+    }
+  }
+}

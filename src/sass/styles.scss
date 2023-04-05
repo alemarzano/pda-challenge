@@ -11,21 +11,15 @@ $blue: #0075ff;
 $primary-light: #80bffe;
 $secondary: #6a6a6a;
 $terciary: #6d7783;
+$terciary-light: #d5d7d9;
 $yelllow: #ffbf47;
 $pink: #e6a0f2;
 $orange: #ff6819;
 $gray: #c3c4ca;
+$gray-light: #efefef;
 $shadow-black: rgba(0, 0, 0, 0.15);
 
 @import "../../node_modules/bootstrap/scss/variables";
-
-$custom-colors: (
-  "terciary": $terciary,
-  "primary-light": $primary-light,
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
-$theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -77,6 +71,7 @@ $spacing-5: 1rem; //16px
 $spacing-6: 1.25rem; //20px
 $spacing-7: 1.5rem; //24px
 $spacing-8: 1.75rem; //28px
+$spacing-9: 2rem; //32px
 $spacing-9: 2.5rem; //40px
 $spacing-10: 3rem; //48px
 $spacing-11: 3.5rem; //56px
@@ -108,8 +103,12 @@ Buttons
 /* Bootstrap btn variables */
 
 $btn-border-radius: $border-radius-pill;
-$btn-padding-x: $spacing-5;
+$btn-padding-x: 1rem;
 $btn-padding-y: 0;
+$accordion-border-width: 0;
+$tooltip-color: $black;
+$tooltip-bg: $white;
+$tooltip-opacity: 1;
 
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -127,7 +126,11 @@ h6 {
   font-weight: 300;
 }
 
-@include media-breakpoint-up(md) {
+h2 {
+  font-size: $font-h2-mobile;
+}
+
+@include media-breakpoint-up(lg) {
   $font-size-base: $font-body-2-desktop;
 
   body {
@@ -145,13 +148,8 @@ h6 {
   h6 {
     font-size: $font-h6-desktop;
   }
-}
-
-.fs-19 {
-  font-size: $font-size-base;
-
-  @include media-breakpoint-up(md) {
-    font-size: $font-body-1-desktop;
+  p {
+    text-align: justify;
   }
 }
 
@@ -159,5 +157,19 @@ h6 {
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/dropdown";
 @import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/close";
+
+/* ==========================================================================
+PDA components
+========================================================================== */
 @import "./pda-buttons";
-@import "./boxes";
+@import "./pda-navbar";
+@import "./pda-steps";
+@import "./pda-progress-circle";
+@import "./pda-helpers";
+@import "./pda-competencias";
+@import "./pda-tendencias";

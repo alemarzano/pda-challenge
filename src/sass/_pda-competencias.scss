@@ -1,0 +1,47 @@
+@import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
+
+.splide {
+  &__slide {
+    background-color: white;
+  }
+  &__track {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__pagination {
+    bottom: -1.5rem;
+  }
+}
+
+.splide__pagination__page.is-active {
+  background-color: red;
+}
+
+.progress-line {
+  margin-bottom: $spacing-5;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $spacing-9;
+  }
+  svg {
+    stroke-linecap: round;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-sm;
+  }
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    max-width: 670px;
+
+    &--value {
+      font-weight: bold;
+      display: inline-flex;
+      font-size: $font-h5-mobile;
+      margin-left: $spacing-7;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $font-h4-desktop;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: $spacing-2;
+  max-width: 100%;
+
+  .step {
+    box-shadow: $box-shadow-sm;
+    border-radius: 20px;
+    background-color: #f2f3f3;
+    height: 0.75rem;
+    background-size: 200% 100%;
+
+    &.step-color {
+      background-image: linear-gradient(to right, $primary 50%, #f2f3f3 50%);
+      animation: cambioColor 300ms linear;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-column-gap: $spacing-4;
+    .step {
+      height: 1.5rem;
+    }
+  }
+}
+
+@keyframes cambioColor {
+  0% {
+    background-position-x: 99%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}

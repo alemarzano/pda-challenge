@@ -1,0 +1,82 @@
+.navbar {
+  background: transparent;
+  padding-top: $spacing-7;
+  margin-bottom: 2.125rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $spacing-9;
+  }
+  &-brand {
+    max-width: 3.125rem;
+    height: 2.187rem;
+    display: flex;
+    align-items: center;
+    img,
+    svg {
+      width: 100%;
+    }
+    &.pda {
+      max-width: 3.43rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 9.375rem;
+      &.pda {
+        max-width: 6rem;
+      }
+    }
+  }
+  .burger {
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: $spacing-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $white;
+    svg {
+      margin: auto;
+      stroke: $primary;
+      width: 1.125rem;
+      height: 100%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 4rem;
+      height: 4rem;
+
+      svg {
+        width: 1.875rem;
+      }
+    }
+  }
+  .navbar-nav {
+    background-color: white;
+    margin-left: auto;
+    width: 40vw;
+    max-width: 11.25rem;
+    border-radius: $spacing-3;
+    padding: $spacing-2 $spacing-5;
+    box-shadow: $box-shadow-sm;
+  }
+}
+
+body {
+  position: relative;
+
+  .header-bg {
+    position: absolute;
+    right: 0;
+    top: -98px;
+    z-index: -1;
+
+    @include media-breakpoint-up(lg) {
+      top: 0;
+      right: -28%;
+    }
+    @include media-breakpoint-up(xl) {
+      right: 0;
+    }
+  }
+}
